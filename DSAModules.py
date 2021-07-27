@@ -467,7 +467,7 @@ def drn_c_58(pretrained=False, **kwargs):
 def drn_d_22(pretrained=False, **kwargs):
     model = DRN(BasicBlock, [1, 1, 2, 2, 2, 2, 1, 1], arch='D', **kwargs)
     if pretrained:
-        model.load_state_dict(model_zoo.load_url(model_urls['drn-d-22'], 'DSAEncoder'))
+        model.load_state_dict(torch.load("/content/drive/MyDrive/S2Rnet/drn_d_22-4bd2f8ea.pth"))
     return model
 
 
